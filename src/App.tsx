@@ -37,9 +37,7 @@ const formSchema = z.object({
     .regex(/^09\d{9}$/, {
       message: "Phone number must be in the format 09xx-xxx-xxxx.",
     }),
-  method: z.enum(["sms", "call", "both"], {
-    required_error: "Please select a method.",
-  }),
+  method: z.enum(["sms", "call", "both"]),
 });
 
 type FormData = z.infer<typeof formSchema>;
