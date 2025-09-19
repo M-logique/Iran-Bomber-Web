@@ -98,7 +98,7 @@ function App() {
         for (const item of content) {
           if (item["Type"] === method || method === "both") {
             try {
-              const res = await fetch(item["Request"]["URL"], {
+              await fetch(item["Request"]["URL"], {
                 headers: item["Request"]["Headers"],
                 method: item["Request"]["Method"],
                 body:
